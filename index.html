@@ -17,191 +17,170 @@
          <!-- INICIO DIV TOPO-->
          <div class="row" id="topo">
             <div class="container">
-               <img src="assets/imagens/logo.png" alt=""> 
-                        
-            </div>    
+               <div class="row">
+                  <div class="col-md-6">
+                     <img src="assets/imagens/logo.png" alt=""> 
+                              
+                  </div>
+                  
+                  <div class="col-md-6 text-right">
+                     <br>
+                     Olá: Jorge <a href="#" class="btn btn-info"><i class="glyphicon glyphicon-log-out"></i> Sair </a> 
+                  </div> 
+               </div>
+            </div>
          </div>  
 
-         <div class="row" id="barra-menu">
+         <div class="row bg-dark" id="barra-menu">
             <div class="container-fluid">
-               <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+               <nav class="navbar navbar-inverse navbar-expand-lg navbar-dark bg-dark"> 
 
                   <div class="container">
-                     <a class="navbar-brand" href="#">Navbar</a>
+                     
                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
                         <span class="navbar-toggler-icon"></span>
                      </button>
                      
                      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-                        <ul class="navbar-nav mr-auto">
-                           <li class="nav-item active">
-                              <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
+                        <ul class="navbar-nav mr-auto" >
+                           <li class="nav-item ">
+                              <a class="nav-link"  href="#">Home</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="#">Link</a>
+                              <a class="nav-link" href="#">Produtos</a>
                            </li>
-                           <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                 Dropdown
-                              </a>
-                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                 <a class="dropdown-item" href="#">Ação</a>
-                                 <a class="dropdown-item" href="#">Outra ação</a>
-                                 <div class="dropdown-divider"></div>
-                                 <a class="dropdown-item" href="#">Algo mais aqui</a>
-                              </div>
+                           
+                           <li class="nav-item">
+                              <a class="nav-link " href="#">Minha Conta</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link disabled" href="#">Desativado</a>
+                              <a class="nav-link " href="#">Carrinho</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link " href="#">Contato</a>
                            </li>
                         </ul>
                         <form class="form-inline my-2 my-lg-0">
                            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
                         </form>
-                  </div>
+                     </div>
                   </div> <!-- fim navbar collapse--> 
                </nav><!-- fim da navBar-->
             </div><!-- fim do container--> 
          </div> <!-- fim barra menu--> 
 
-         <div class="row" id="conteudo"> <!-- Conteudo Central-->
-            <div class="col-md-2 " id="lateral"><!-- coluna da esquerda -->
-               <div class="list-group">
-                  <span class="list-group-item active"> Categorias</span>
-                  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Presentes</a>                   <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Brinquedos</a> 
-                  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Presentes</a> 
-                  <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Brinquedos</a> 
-                  <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Presentes</a> 
-                  <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Brinquedos</a> 
-               </div><!--fim da list group-->              
-            </div> <!-- finm coluna esquerda -->
-            <div class="col-md-10">
-               <br>
-               <!-- =============== AQUI VAI TODO O CONTEUDO DO SITE OU DINAMICO  -->
-               <h2 class="text-center">Meus Produtos</h2>
-               <hr>
+         <!-- Comeca DIV CONTEUDO-->
+         <br>
+         <div class="row" id="conteudo"> 
+            <div class="container">
                <div class="row">
-                  <div class="col-md-4">
-                     <div class="card">
-                        <img  class="card-img-top" src="assets/imagens/produto.jpg" alt=""> 
-                           
-                        <div class="card-body">
-                           <h5 class="card-title text-center">Produto teste 1</h5>
-                           <h4 class="text-primary text-center card-text"><i class="glyphicon glyphicon-tag"></i> R$ 1.000,00</h4>
-                           <p class="text-center">
-                              <a href="#" class="btn btn-success "><i class="glyphicon glyphicon-plus-sign"></i> Detalhes </a>   
-                           </p>
-                        </div><!-- fim da div caption -->    
-                     </div>
-                  </div> <!-- fim da <li> col-md-4 -->
 
-                  <div class="col-md-4">
-                     <div class="thumbnail">
-                        <img src="imagens/produto.jpg" alt=""> 
-                              
-                        <div class="caption">
-                           <h5>Produto teste 1</h5>
-                           <h4 class="text-primary text-center"><i class="glyphicon glyphicon-tag"></i> R$ 1.000,00</h4>
-                           <p class="text-center">
-                              <a href="#" class="btn btn-success "><i class="glyphicon glyphicon-plus-sign"></i> Detalhes </a>   
-                           </p>
-                                                      
-                        </div><!-- fim da div caption --> 
-                     </div>
-                  </div> <!-- fim da <li> col-md-4 -->
+                  <!-- coluna da esquerda -->
+                  <div class="col-md-2 " id="lateral">
+                     <div class="list-group">
+                        <span class="list-group-item active"> Categorias</span>
+                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Todos</a>                   <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Brinquedos</a> 
+                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Geral</a> 
+                        <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Camisas</a> 
+                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Calças</a> 
+                        <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Tênis</a> 
+                     </div><!--fim da list group-->              
+                  </div> <!-- finm coluna esquerda -->
+                  <div class="col-md-10" id="lateral-conteudo">
+                     
+                     <!-- =============== AQUI VAI TODO O CONTEUDO DO SITE OU DINAMICO  -->
+                     <h2 class="text-center">Meus Produtos</h2>
+                     <hr>
+                     <div class="row" id="pularliha">
+                        <div class="col-md-4">
+                           <div class="img-thumbnail ">
+                              <a href="#">
+                                 <img  class="rounded mx-auto d-block" src="assets/imagens/produto.jpg" width="200" height="200"  alt=""> 
+                                 
+                                 <div class="caption">
+                                    <h4 class="text-center">Produto teste 1</h4>
+                                    <h3 class="text-center text-danger"><i class="glyphicon glyphicon-tag"></i> R$ 1.000,00</h3>
+                                    
+                                 </div><!-- fim da div caption -->    
+                              </a>
+                           </div>
+                        </div> <!-- fim da <li> col-md-4 -->
 
-                  <div class="col-md-4">
-                     <div class="thumbnail">
-                        <img src="imagens/produto.jpg" alt=""> 
-                        
-                        <div class="caption">
-                            <h5>Produto teste 1</h5>
-                            <h4 class="text-primary text-center"><i class="glyphicon glyphicon-tag"></i> R$ 1.000,00</h4>
-                            <p class="text-center">
-                                <a href="#" class="btn btn-success "><i class="glyphicon glyphicon-plus-sign"></i> Detalhes </a>   
-                            </p>
-                                                
-                        </div><!-- fim da div caption -->    
-                     </div>
-                  </div> <!-- fim da <li> col-md-4 -->
+                        <div class="col-md-4 mb-3" >
+                           <div class="img-thumbnail ">
+                              <a href="#">
+                                 <img  class="rounded mx-auto d-block" src="assets/imagens/produto.jpg" width="200" height="200"  alt=""> 
+                                 
+                                 <div class="caption">
+                                    <h4 class="text-center">Produto teste 1</h4>
+                                    <h3 class="text-center text-danger"><i class="glyphicon glyphicon-tag"></i> R$ 1.000,00</h3>
+                                    
+                                 </div><!-- fim da div caption -->    
+                              </a>
+                           </div>
+                        </div> <!-- fim da <li> col-md-4 -->
 
-                  <div class="col-md-4">
-                   
-                    <div class="thumbnail">
-                        <img src="imagens/produto.jpg" alt=""> 
-                        
-                        <div class="caption">
-                            <h5>Produto teste 1</h5>
-                            <h4 class="text-primary text-center"><i class="glyphicon glyphicon-tag"></i> R$ 1.000,00</h4>
-                            <p class="text-center">
-                                <a href="#" class="btn btn-success "><i class="glyphicon glyphicon-plus-sign"></i> Detalhes </a>   
-                            </p>
-                                                
-                        </div><!-- fim da div caption -->    
-                     </div>
-                  </div> <!-- fim da <li> col-md-4 -->
+                        <div class="col-md-4 mb-3">
+                           <div class="img-thumbnail ">
+                              <a href="#">
+                                 <img  class="rounded mx-auto d-block" src="assets/imagens/produto.jpg" width="200" height="200"  alt=""> 
+                                 
+                                 <div class="caption">
+                                    <h4 class="text-center">Produto teste 1</h4>
+                                    <h3 class="text-center text-danger"><i class="glyphicon glyphicon-tag"></i> R$ 1.000,00</h3>
+                                    
+                                 </div><!-- fim da div caption -->    
+                              </a>
+                           </div>
+                        </div> <!-- fim da <li> col-md-4 -->
 
-                  <div class="col-md-4">
-                   
-                    <div class="thumbnail">
-                        <img src="imagens/produto.jpg" alt=""> 
-                        
-                        <div class="caption">
-                            <h5>Produto teste 1</h5>
-                            <h4 class="text-primary text-center"><i class="glyphicon glyphicon-tag"></i> R$ 1.000,00</h4>
-                            <p class="text-center">
-                                <a href="#" class="btn btn-success "><i class="glyphicon glyphicon-plus-sign"></i> Detalhes </a>   
-                            </p>
-                                                
-                        </div><!-- fim da div caption -->    
-                     </div>
-                  </div> <!-- fim da <li> col-md-4 -->
+                        <div class="col-md-4 mb-3">
+                           <div class="img-thumbnail ">
+                              <a href="#">
+                                 <img  class="rounded mx-auto d-block" src="assets/imagens/produto.jpg" width="200" height="200"  alt=""> 
+                                 
+                                 <div class="caption">
+                                    <h4 class="text-center">Produto teste 1</h4>
+                                    <h3 class="text-center text-danger"><i class="glyphicon glyphicon-tag"></i> R$ 1.000,00</h3>
+                                    
+                                 </div><!-- fim da div caption -->    
+                              </a>
+                           </div>
+                        </div> <!-- fim da <li> col-md-4 -->
 
-                <div class="col-md-4">
-                   
-                    <div class="thumbnail">
-                        <img src="imagens/produto.jpg" alt=""> 
-                        
-                        <div class="caption">
-                            <h5>Produto teste 1</h5>
-                            <h4 class="text-primary text-center"><i class="glyphicon glyphicon-tag"></i> R$ 1.000,00</h4>
-                            <p class="text-center">
-                                <a href="#" class="btn btn-success "><i class="glyphicon glyphicon-plus-sign"></i> Detalhes </a>   
-                            </p>
-                                                
-                        </div><!-- fim da div caption -->    
+                         <div class="col-md-4 mb-3">
+                           <div class="img-thumbnail ">
+                              <a href="#">
+                                 <img  class="rounded mx-auto d-block" src="assets/imagens/produto.jpg" width="200" height="200"  alt=""> 
+                                 
+                                 <div class="caption">
+                                    <h4 class="text-center">Produto teste 1</h4>
+                                    <h3 class="text-center text-danger"><i class="glyphicon glyphicon-tag"></i> R$ 1.000,00</h3>
+                                    
+                                 </div><!-- fim da div caption -->    
+                              </a>
+                           </div>
+                        </div> <!-- fim da <li> col-md-4 -->
+
+                         <div class="col-md-4 mb-3">
+                           <div class="img-thumbnail ">
+                              <a href="#">
+                                 <img  class="rounded mx-auto d-block" src="assets/imagens/produto.jpg" width="200" height="200"  alt=""> 
+                                 
+                                 <div class="caption">
+                                    <h4 class="text-center">Produto teste 1</h4>
+                                    <h3 class="text-center text-danger"><i class="glyphicon glyphicon-tag"></i> R$ 1.000,00</h3>
+                                    
+                                 </div><!-- fim da div caption -->    
+                              </a>
+                           </div>
+                        </div> <!-- fim da <li> col-md-4 -->
                      </div>
-                  </div> <!-- fim da <li> col-md-4 -->
-               </div>    
-            
-            <!-- paginação -->
-            <nav class="text-center">
-               <ul class="pagination">
-                  <li>
-                     <a href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                     </a>
-                  </li>
-                  <li><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li>
-                     <a href="#" aria-label="Next">
-                     <span aria-hidden="true">&raquo;</span>
-                     </a>
-                  </li>
-               </ul>
-            </nav>
-                    
-                    
-            <!-- ====================== FIM DO CONTEUDO DINAMICO   -->
-         </div>
-      </div><!-- Fim Conteudo Central-->  
-         
-   </div> <!-- Fim Conatiner Geral-->  
+                  </div><!-- Fim Conteudo Central-->  
+               </div>
+            </div>
+         </div> <!-- Fim Conatiner Geral-->  
       
 
       <script src="assets/js/jquery-3.3.1.js"></script>
