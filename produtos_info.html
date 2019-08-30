@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link href="assets/css/bootstrap.css" rel="stylesheet">
+      <link href="assets/css/all.css" rel="stylesheet">
+      <link href="assets/css/styles.css" rel="stylesheet">
+      <link href="assets/css/tema.css" rel="stylesheet" type="text/css"/>
+      <title>Bootstrap</title>
+   </head>
+
+   <body>
+      <!--INICIO CONTAINER GERAL-->
+      <div class="container-fluid">
+         <!-- INICIO DIV TOPO-->
+         <div class="row" id="topo">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-6">
+                     <img src="assets/imagens/logo.png" alt=""> 
+                              
+                  </div>
+                  
+                  <div class="col-md-6 text-right">
+                     <br>
+                     Olá: Jorge <a href="#" class="btn btn-info"><i class="glyphicon glyphicon-log-out"></i> Sair </a> 
+                  </div> 
+               </div>
+            </div>
+         </div>  
+
+         <div class="row bg-dark" id="barra-menu">
+            <div class="container-fluid">
+               <nav class="navbar navbar-inverse navbar-expand-lg navbar-dark bg-dark"> 
+
+                  <div class="container">
+                     
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                     
+                     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                        <ul class="navbar-nav mr-auto" >
+                           <li class="nav-item ">
+                              <a class="nav-link"  href="#">Home</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#">Produtos</a>
+                           </li>
+                           
+                           <li class="nav-item">
+                              <a class="nav-link " href="#">Minha Conta</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link " href="#">Carrinho</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link " href="#">Contato</a>
+                           </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                           <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+                        </form>
+                     </div>
+                  </div> <!-- fim navbar collapse--> 
+               </nav><!-- fim da navBar-->
+            </div><!-- fim do container--> 
+         </div> <!-- fim barra menu--> 
+
+         <!-- Comeca DIV CONTEUDO-->
+         <br>
+         <div class="row" id="conteudo"> 
+            <div class="container">
+               <div class="row">
+
+                    <!-- coluna da esquerda -->
+                    <div class="col-md-2 " id="lateral">
+                        <div class="list-group">
+                            <span class="list-group-item active"> Categorias</span>
+                            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Todos</a>                   <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Brinquedos</a> 
+                            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Geral</a> 
+                            <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Camisas</a> 
+                            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Calças</a> 
+                            <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Tênis</a> 
+                        </div><!--fim da list group-->              
+                    </div> <!-- finm coluna esquerda -->
+                  <div class="col-md-10" id="lateral-conteudo">
+                     <!-- =============== AQUI VAI TODO O CONTEUDO DO SITE OU DINAMICO  -->
+                        <h3 class="text-center">Tenis - Ref: 7618217891</h3>
+                        <hr>
+
+                        <div class="row">
+                        <!-- div da esquerda imagem do produto  -->
+                            <div class="col-md-6 ">
+
+                                <img class="img-thumbnail" src="assets/imagens/produto.jpg" alt="" > 
+
+                            </div>
+                            <!--   div da direita info produtos    -->
+                            <div class="col-md-6 img-thumbnail">
+                                
+                                <div class="row">
+                                   <img src="assets/imagens/logo-pagseguro.png" alt="">
+                                </div>
+                                <hr>
+                                <div class="row">
+                                   <div class="col-md-6">
+                                   <h3 class="text-center preco">R$9,90</h3>   
+                                       
+                                   
+                                   
+                                   <div class="col-md-6">
+                                       <form name="carrinho" method="post" action="">
+                                           <input type="hidden" name="pro_id" value="1">
+                                           <input type="hidden" name="acao" value="add">
+                                       <button  class="btn btn-success btn-lg">Comprar</button>
+                                       </form> 
+                                    </div>     
+                                </div>
+                              </div>
+                           </div>
+                     
+                                <!-- listagem de imagens extras-->
+                                <!--<div class="row">
+                                    <hr>
+                                    <h4 class="float-left">Mais imagens</h4>
+                                    <ul style="list-style: none">
+                                        <li class="col-md-1 ">
+                                            <img src="assets/imagens/produto.jpg" alt="" class="img-thumbnail">
+                                        </li>
+                                    </ul>
+                                </div>-->
+                                <!-- descrição do produto-->  
+                                <div class="row">
+                                    <hr>
+                                    <h4 class="text-center">Descrição do produto</h4>
+
+                                    
+
+                                </div>  
+                                <br>
+                                <br>
+
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Fim Conatiner Geral-->  
+      
+
+      <script src="assets/js/jquery-3.3.1.js"></script>
+      <script src="assets/js/popper.js"></script>
+      <script src="assets/js/bootstrap.js"></script>
+      <script src="assets/js/script.js"></script>
+   </body>
+
+</html>
