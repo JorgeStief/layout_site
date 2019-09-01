@@ -22,16 +22,16 @@ padding-top:30px;
    
 }
 
-/*#lateral{
+#lateral{
     
    border-right: 1px solid #adadad;
    height: 100%;
-  }*/
+  }
 
-  #lateral-conteudo{
+  /*#lateral-conteudo{
     border-left: 1px solid #adadad;
     height: 100%;
-  }
+  }*/
 
   .transparente{
    opacity: 0.9;   
