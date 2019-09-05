@@ -136,5 +136,14 @@ div.style.display = "inline";
 
 }
 
+$("#Nome").blur(function(){
+    if($("#Nome").val() == ""){
+        
+        $(".valid-feedback"). html("<div class="text-success">Teste</div>");
+    }
+      
+    
+});
+
 
 
