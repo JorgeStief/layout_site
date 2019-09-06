@@ -107,54 +107,80 @@
                         <!-- =============== AQUI VAI TODO O CONTEUDO DO SITE OU DINAMICO  -->
                         <h1 align="center"> CADASTRO</h1>
                         <hr>
-                        <form class="needs-validation" id="form" >
+                        <form class="needs-validation" id="form">
                             <div class="form-row pb-3">
                                 <label class="col-md-1" for="Nome">Nome <h11>*</h11></label>
                                 <div class="col-md-10   ">
-                                    <input id="Nome" name="Nome" placeholder="Digite seu Nome Completo" class="form-control"
-                                        required type="text">
+                                    <input id="Nome" name="Nome" placeholder="Digite seu Nome Completo"
+                                        class="form-control " required type="text">
 
-                                        <div class="valid-feedback">
-                                            
-                                        </div>
-                                         <div class="invalid-feedback">
-                                            
-                                        </div>
+                                    <div class="valid-feedback">
+
+                                    </div>
                                     
+
                                 </div>
 
-                                
+
                             </div>
 
                             <div class="form-row pb-3">
                                 <label class="col-md-1" for="Nome">CPF <h11>*</h11></label>
                                 <div class="col-md-2">
                                     <input id="cpf" name="cpf" placeholder="Apenas números"
-                                        class="form-control input-md" required="" type="text"  maxlength="11"
+                                        class="form-control input-md" required="" type="text" maxlength="11"
                                         pattern="[0-9]+$">
                                 </div>
 
                                 <label align="center" class="col-md-2 " for="Nome">Nascimento <h11>*</h11></label>
                                 <div class="col-md-2">
-                                    <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA"
-                                        class="form-control" required="" type="text" maxlength="10"
-                                        OnKeyPress="formatar('##/##/####', this)"  pattern="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$" onBlur="showhide()">
+                                    <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control"
+                                        required="" type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)"
+                                        pattern="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$"
+                                        onBlur="showhide()">
                                 </div>
 
                                 <label align="center" class="col-md-1" for="radios">Sexo <h11>*</h11></label>
                                 <div class="col-md-4 ">
                                     <label required="" class="custom-radio" for="radios-0">
                                         <input name="sexo" id="sexo" value="feminino" type="radio" required>
-                                            Feminino
+                                        Feminino
                                     </label>
                                     <label class="radio-inline" for="radios-1">
                                         <input name="sexo" id="sexo" value="masculino" type="radio">
-                                            Masculino
+                                        Masculino
                                     </label>
                                 </div>
                             </div>
+
+                            <div class="form-row pb-3">
+                                <label class="col-md-1" for="inlineFormInputGroupUsername">Celular <h11>*</h11></label>
+                                <div class="input-group col-md-3 ">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fas fa-phone"> </i></div>
+                                    </div>
+                                    <input type="text" class="form-control" id="Cel" placeholder="XX XXXXX-XXXX"
+                                        maxlength="13" placeholder="XX XXXXX-XXXX"
+                                        pattern="/^(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/"
+                                        OnKeyPress="formatar('## #####-####', this)" required>
+                                </div>
+
+                                <label class="col-md-1 pl-3 " for="inlineFormInputGroupUsername">Telefone <h11></h11>
+                                    </label>
+                                <div class="input-group col-md-3 pl-3 ">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fas fa-phone"> </i></div>
+                                    </div>
+                                    <input type="text" class="form-control" id="Tel" maxlength="12"
+                                        placeholder="XX XXXX-XXXX" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$"
+                                        OnKeyPress="formatar('## ####-####', this)">
+                                </div>
+
+
+                            </div>
+
                             <div class="form-row">
-                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
                             </div>
                         </form>
 
