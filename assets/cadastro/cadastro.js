@@ -136,12 +136,18 @@ function showhide() {
 
 $("#Nome").blur(function () {
     if ($("#Nome").val() == "") {
-        $("#Nome").addClass("is-invalid");
-        $("<div> Campo Obrigatório</div>").insertAfter("#Nome").addClass("invalid-feedback");
+        if($("#Nome").attr('class') == "form-control is-invalid" ){
 
-        
+        }
+        else{
+            $("#Nome").addClass("is-invalid");
+            $("<div> Campo Obrigatório</div>").insertAfter("#Nome").addClass("invalid-feedback");
 
-
+        }
+    }
+    else{
+        $("#Nome").addClass("is-valid").removeClass("is-invalid")
+        $("").insertAfter("#Nome");
     }
 
 
