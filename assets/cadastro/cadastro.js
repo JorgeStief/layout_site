@@ -168,6 +168,7 @@ $("#cpf").blur(function () {
 
             }
             else{
+                //$("CPF Inválido").insertAfter("#cpf");
                 $("#cpf").parent().parent().find("div.invalid-feedback").html("CPF Inválido");
 
             }
