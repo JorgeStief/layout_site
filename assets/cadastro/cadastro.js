@@ -25,11 +25,13 @@ function meu_callback(conteudo) {
     }
 }
 
-function pesquisacep(valor) {
-
+function pesquisacep() {
+    
+    valor = $("#cep").val();
     //Nova variável "cep" somente com dígitos.
     var cep = valor.replace(/\D/g, '');
-
+    
+    alert(cep);
     //Verifica se campo cep possui valor informado.
     if (cep !== "") {
 
@@ -38,7 +40,7 @@ function pesquisacep(valor) {
 
         //Valida o formato do CEP.
         if (validacep.test(cep)) {
-
+            
             //Preenche os campos com "..." enquanto consulta webservice.
             document.getElementById('rua').value = "...";
             document.getElementById('bairro').value = "...";
@@ -54,14 +56,25 @@ function pesquisacep(valor) {
             //Insere script no documento e carrega o conteúdo.
             document.body.appendChild(script);
 
+            $("#cep").addClass("is-valid").removeClass("is-invalid")
+            $("").insertAfter("#cep");
+
         } //end if.
         else {
             //cep é inválido.
+            if($("#cep").attr('class') != "form-control is-invalid" ){
+                $("#cep").addClass("is-invalid");
+                $("<div> Cep Inválido</div>").insertAfter("#cep").addClass("invalid-feedback");
+            }
             limpa_formulario_cep();
-            alert("Formato de CEP inválido.");
+            
         }
     } //end if.
     else {
+        if($("#cep").attr('class') != "form-control is-invalid" ){
+            $("#cep").addClass("is-invalid");
+            $("<div> Cep Inválido</div>").insertAfter("#cep").addClass("invalid-feedback");
+        }
         //cep sem valor, limpa formulário.
         limpa_formulario_cep();
     }
@@ -78,27 +91,7 @@ function formatar(mascara, documento) {
 
 }
 
-function idade() {
-    var data = document.getElementById("dtnasc").value;
-    var dia = data.substr(0, 2);
-    var mes = data.substr(3, 2);
-    var ano = data.substr(6, 4);
-    var d = new Date();
-    var ano_atual = d.getFullYear(),
-        mes_atual = d.getMonth() + 1,
-        dia_atual = d.getDate();
 
-    ano = +ano,
-        mes = +mes,
-        dia = +dia;
-
-    var idade = ano_atual - ano;
-
-    if (mes_atual < mes || mes_atual == mes_aniversario && dia_atual < dia) {
-        idade--;
-    }
-    return idade;
-}
 
 
 function exibe(i) {
@@ -152,6 +145,40 @@ $("#Nome").blur(function () {
 
 
 });
+
+$("#cpf").blur(function () {
+    if ($("#cpf").val() == "") {
+        if($("#cpf").attr('class') != "form-control is-invalid" ){
+            $("#cpf").addClass("is-invalid");
+            $("<div> Campo Obrigatório</div>").insertAfter("#cpf").addClass("invalid-feedback");
+
+        }
+        
+    }
+    else{
+        var regexp = new RegExp("^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$")
+        if(regexp.test($("#cpf").val())){
+            $("#cpf").addClass("is-valid").removeClass("is-invalid")
+            $("").insertAfter("#cpf");
+        }
+        else{
+            if($("#cpf").attr('class') != "form-control is-invalid" ){
+                $("#cpf").addClass("is-invalid");
+                $("<div> CPF Inválido</div>").insertAfter("#cpf").addClass("invalid-feedback");
+
+            }
+            else{
+                $("#cpf").parent().parent().find("div.invalid-feedback").html("CPF Inválido");
+
+            }
+            
+        }
+        
+    }
+
+
+});
+
 
 
 
