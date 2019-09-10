@@ -107,32 +107,33 @@
                         <!-- =============== AQUI VAI TODO O CONTEUDO DO SITE OU DINAMICO  -->
                         <h1 align="center"> CADASTRO</h1>
                         <hr>
-                        <form class="needs-validation" id="form">
+                        <form id="form">
                             <div class="form-row pb-3">
                                 <label class="col-md-1" for="Nome">Nome <h11>*</h11></label>
                                 <div class="col-md-10   ">
                                     <input id="Nome" name="Nome" placeholder="Digite seu Nome Completo"
-                                        class="form-control " required type="text">
+                                        class="form-control  " required type="text">
 
 
-
+                                    
 
                                 </div>
+                                
 
 
                             </div>
 
                             <div class="form-row pb-3">
-                                <label class="col-md-1" for="Nome">CPF <h11>*</h11></label>
+                                <label class="col-md-1" for="cpf">CPF <h11>*</h11></label>
                                 <div class="col-md-2">
                                     <input id="cpf" name="cpf" placeholder="Apenas números"
                                         class="form-control " required="" type="text" maxlength="11"
                                         pattern="[0-9]+$">
                                 </div>
 
-                                <label align="center" class="col-md-2 " for="Nome">Nascimento <h11>*</h11></label>
+                                <label align="center" class="col-md-2 " for="dtnasc">Nascimento <h11>*</h11></label>
                                 <div class="col-md-2">
-                                    <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control"
+                                    <input id="dtnasc" name="dtnasc"  placeholder="DD/MM/AAAA" class="form-control"
                                         required="" type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)"
                                         pattern="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$"
                                         onBlur="showhide()">
@@ -141,35 +142,35 @@
                                 <label align="center" class="col-md-1" for="radios">Sexo <h11>*</h11></label>
                                 <div class="col-md-4 ">
                                     <label required="" class="custom-radio" for="radios-0">
-                                        <input name="sexo" id="sexo" value="feminino" type="radio" required>
+                                        <input name="sexof" id="sexof" value="feminino" type="radio" required>
                                         Feminino
                                     </label>
                                     <label class="radio-inline" for="radios-1">
-                                        <input name="sexo" id="sexo" value="masculino" type="radio">
+                                        <input name="sexom" id="sexom" value="masculino" type="radio">
                                         Masculino
                                     </label>
                                 </div>
                             </div>
 
                             <div class="form-row pb-3">
-                                <label class="col-md-1" for="inlineFormInputGroupUsername">Celular <h11>*</h11></label>
+                                <label class="col-md-1" for="cel">Celular <h11>*</h11></label>
                                 <div class="input-group col-md-3 ">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text"><i class="fas fa-phone"> </i></div>
                                     </div>
-                                    <input type="text" class="form-control" id="Cel" placeholder="XX XXXXX-XXXX"
+                                    <input type="text" class="form-control" id="cel" name="cel" placeholder="XX XXXXX-XXXX"
                                         maxlength="13" placeholder="XX XXXXX-XXXX"
                                         pattern="/^(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/"
-                                        OnKeyPress="formatar('## #####-####', this)" required>
+                                        OnKeyPress="formatar('## #####-####', this)" >
                                 </div>
 
-                                <label class="col-md-1 pl-3 " for="inlineFormInputGroupUsername">Telefone <h11></h11>
+                                <label class="col-md-1 pl-3 " for="tel">Telefone <h11></h11>
                                 </label>
                                 <div class="input-group col-md-3 pl-3 ">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text"><i class="fas fa-phone"> </i></div>
                                     </div>
-                                    <input type="text" class="form-control" id="Tel" maxlength="12"
+                                    <input type="text" class="form-control" id="tel" name="tel" maxlength="12"
                                         placeholder="XX XXXX-XXXX" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$"
                                         OnKeyPress="formatar('## ####-####', this)">
                                 </div>
@@ -183,7 +184,7 @@
                                     <div class="input-group-prepend">
                                         <div class="input-group-text"><i class="fas fa-envelope"> </i></div>
                                     </div>
-                                    <input type="text" class="form-control" id="email" placeholder="email@email.com"
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="email@email.com"
                                         pattern="/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/" required>
                                 </div>
                             </div>
@@ -205,7 +206,7 @@
                             </div>
 
                             <div class="form-row pb-3">
-                                <label class="col-md-1" for="CEP">Endereço</label>
+                                <label class="col-md-1" for="rua">Endereço</label>
                                 <div class="input-group col-md-5 ">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">Rua</div>
@@ -278,6 +279,7 @@
 
 
     <script src="assets/js/jquery-3.3.1.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/script.js"></script>

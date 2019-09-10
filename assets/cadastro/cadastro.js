@@ -113,20 +113,33 @@ function habilita(i) {
     document.getElementById(i).disabled = false;
 }
 
+//Validação simples
+$(document).ready(function(){
+    $("#form").validate({
+        debug: false,
+        rules: {
+            nome:{
+                required: true,
+                minlength: 5,
 
-function showhide() {
-    var div = document.getElementById("newpost");
+            }
 
-    if (idade() >= 18) {
+        },
+        errorPlacement: function (error, element) {
+            var aux = $(element).parent()
+            error.insertAfter(element).addClass("invalid-feedback")
+            $(element).addClass("is-invalid")
+        },
+        messages: {
+            nome:{
+                required: "Campo Obrigatório"
+            }
+        }
+    });
+});
 
-        div.style.display = "none";
-    }
-    else if (idade() < 18) {
-        div.style.display = "inline";
-    }
 
-}
-
+/*
 $("#Nome").blur(function () {
     if ($("#Nome").val() == "") {
         if($("#Nome").attr('class') == "form-control is-invalid" ){
@@ -146,6 +159,25 @@ $("#Nome").blur(function () {
 
 });
 
+$("#tel").blur(function () {
+    if ($("#tel").val() == "") {
+        if($("#tel").attr('class') == "form-control is-invalid" ){
+
+        }
+        else{
+            $("#tel").addClass("is-invalid");
+            $("<div> Campo Obrigatório</div>").insertAfter("#tel").addClass("invalid-feedback");
+
+        }
+    }
+    else{
+        $("#tel").addClass("is-valid").removeClass("is-invalid")
+        $("").insertAfter("#tel");
+    }
+
+
+});
+
 $("#cpf").blur(function () {
     if ($("#cpf").val() == "") {
         if($("#cpf").attr('class') != "form-control is-invalid" ){
@@ -156,6 +188,9 @@ $("#cpf").blur(function () {
         
     }
     else{
+        $("#cpf").addClass("is-valid").removeClass("is-invalid")
+        $("").insertAfter("#cpf");  
+
         var regexp = new RegExp("^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$")
         if(regexp.test($("#cpf").val())){
             $("#cpf").addClass("is-valid").removeClass("is-invalid")
@@ -178,7 +213,7 @@ $("#cpf").blur(function () {
     }
 
 
-});
+});*/
 
 
 
