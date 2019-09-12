@@ -31,7 +31,7 @@ function pesquisacep() {
     //Nova variável "cep" somente com dígitos.
     var cep = valor.replace(/\D/g, '');
     
-    alert(cep);
+   
     //Verifica se campo cep possui valor informado.
     if (cep !== "") {
 
@@ -56,8 +56,8 @@ function pesquisacep() {
             //Insere script no documento e carrega o conteúdo.
             document.body.appendChild(script);
 
-            $("#cep").addClass("is-valid").removeClass("is-invalid")
-            $("").insertAfter("#cep");
+            //$("#cep").addClass("is-valid").removeClass("is-invalid")
+            //$("").insertAfter("#cep");
 
         } //end if.
         else {
@@ -116,104 +116,71 @@ function habilita(i) {
 //Validação simples
 $(document).ready(function(){
     $("#form").validate({
-        debug: false,
+        debug: true,
         rules: {
             nome:{
                 required: true,
-                minlength: 5,
+                
 
-            }
+            },
+            cpf:{
+                required: true,
+                
+
+            },
+            dtnasc: {
+                required: true,
+            },
+            cep: {
+                required: true,
+            },
+            numero: {
+                required: true,
+            },
+            cel: {
+                required: true,
+            },
+            email: {
+                required: true,
+            },
 
         },
         errorPlacement: function (error, element) {
             var aux = $(element).parent()
             error.insertAfter(element).addClass("invalid-feedback")
-            $(element).addClass("is-invalid")
+
+            
         },
         messages: {
             nome:{
                 required: "Campo Obrigatório"
+            },
+            cpf:{
+                required: "Campo Obrigatório"
+            },
+            dtnasc:{
+                required: "Campo Obrigatório"
+            },
+            email:{
+                required: "Campo Obrigatório"
+            },
+            cep:{
+                required: "Campo Obrigatório"
+            },
+            numero:{
+                required: "Campo Obrigatório"
+            },
+            cel:{
+                required: "Campo Obrigatório"
+            },
+            email:{
+                required: "Campo Obrigatório"
             }
+            
         }
     });
 });
 
-
-/*
-$("#Nome").blur(function () {
-    if ($("#Nome").val() == "") {
-        if($("#Nome").attr('class') == "form-control is-invalid" ){
-
-        }
-        else{
-            $("#Nome").addClass("is-invalid");
-            $("<div> Campo Obrigatório</div>").insertAfter("#Nome").addClass("invalid-feedback");
-
-        }
-    }
-    else{
-        $("#Nome").addClass("is-valid").removeClass("is-invalid")
-        $("").insertAfter("#Nome");
-    }
-
-
-});
-
-$("#tel").blur(function () {
-    if ($("#tel").val() == "") {
-        if($("#tel").attr('class') == "form-control is-invalid" ){
-
-        }
-        else{
-            $("#tel").addClass("is-invalid");
-            $("<div> Campo Obrigatório</div>").insertAfter("#tel").addClass("invalid-feedback");
-
-        }
-    }
-    else{
-        $("#tel").addClass("is-valid").removeClass("is-invalid")
-        $("").insertAfter("#tel");
-    }
-
-
-});
-
-$("#cpf").blur(function () {
-    if ($("#cpf").val() == "") {
-        if($("#cpf").attr('class') != "form-control is-invalid" ){
-            $("#cpf").addClass("is-invalid");
-            $("<div> Campo Obrigatório</div>").insertAfter("#cpf").addClass("invalid-feedback");
-
-        }
-        
-    }
-    else{
-        $("#cpf").addClass("is-valid").removeClass("is-invalid")
-        $("").insertAfter("#cpf");  
-
-        var regexp = new RegExp("^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$")
-        if(regexp.test($("#cpf").val())){
-            $("#cpf").addClass("is-valid").removeClass("is-invalid")
-            $("").insertAfter("#cpf");
-        }
-        else{
-            if($("#cpf").attr('class') != "form-control is-invalid" ){
-                $("#cpf").addClass("is-invalid");
-                $("<div> CPF Inválido</div>").insertAfter("#cpf").addClass("invalid-feedback");
-
-            }
-            else{
-                //$("CPF Inválido").insertAfter("#cpf");
-                $("#cpf").parent().parent().find("div.invalid-feedback").html("CPF Inválido");
-
-            }
-            
-        }
-        
-    }
-
-
-});*/
 
 
 
