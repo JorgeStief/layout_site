@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/all.css" rel="stylesheet">
+    <link href="assets/cadastro/cadastro.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/tema.css" rel="stylesheet" type="text/css" />
+    <title>Bootstrap</title>
+</head>
+
+<body>
+    <!--INICIO CONTAINER GERAL-->
+    <div class="container-fluid">
+        <!-- INICIO DIV TOPO-->
+        <div class="row" id="topo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="assets/imagens/logo.png" alt="">
+
+                    </div>
+
+                    <div class="col-md-6 text-right">
+                        <br>
+                        Olá: Jorge <a href="#" class="btn btn-info"><i class="fas fa-user"></i> Sair </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row bg-dark" id="barra-menu">
+            <div class="container-fluid">
+                <nav class="navbar navbar-inverse navbar-expand-lg navbar-dark bg-dark">
+
+                    <div class="container">
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado"
+                            aria-expanded="false" aria-label="Alterna navegação">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="index.html"><i class="fab fas fa-home"></i> Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="produtos.html"><i class="fab fas fas fa-ticket-alt"></i>
+                                        Produtos</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link " href="login.html"><i class="fab fas fas fa-user-circle"></i>
+                                        Minha Conta</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="carrinho.html"><i class=" fas fas fa-shopping-cart"></i>
+                                        Carrinho</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="contato.html"><i
+                                            class=" fas fas fas fas fa-file-contract"></i> Contato</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar"
+                                    aria-label="Pesquisar">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
+                                        class=" fas fas fa-search"></i> Pesquisar</button>
+                            </form>
+                        </div>
+                    </div> <!-- fim navbar collapse-->
+                </nav><!-- fim da navBar-->
+            </div><!-- fim do container-->
+        </div> <!-- fim barra menu-->
+
+        <!-- Comeca DIV CONTEUDO-->
+        <br>
+        <div class="row" id="conteudo">
+            <div class="container">
+                <div class="row">
+
+                    <!-- coluna da esquerda -->
+                    <div class="col-md-2 " id="lateral">
+                        <div class="list-group">
+                            <span class="list-group-item active"> Categorias</span>
+                            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span>
+                                Todos</a> <a href="#" class="list-group-item"><i
+                                    class="glyphicon glyphicon-menu-right"></i> Brinquedos</a>
+                            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span>
+                                Geral</a>
+                            <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i>
+                                Camisas</a>
+                            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span>
+                                Calças</a>
+                            <a href="#" class="list-group-item"><i class="glyphicon glyphicon-menu-right"></i> Tênis</a>
+                        </div>
+                        <!--fim da list group-->
+                    </div> <!-- finm coluna esquerda -->
+                    <div class="col-md-10" id="lateral-conteudo">
+
+                        <!-- =============== AQUI VAI TODO O CONTEUDO DO SITE OU DINAMICO  -->
+                        <h1 align="center"> CADASTRO PRODUTO</h1>
+                        <hr>
+                        <form id="form" action="#">
+                            <div class="form-group">
+                                <label for="cate">Categoria: <h11>*</h11></label>
+                                <select class="form-control" id="cate" name="cate">
+                                    <option value="">Escolha uma opção!</option>
+                                    <option value="calca">Calças</option>
+                                    <option value="tenis">Tênis</option>
+                                    <option value="camisas">Camisas</option>
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="nome">Nome: <h11>*</h11></label>
+                                <input type="text" class="form-control" id="nome" name="nome">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preco">Preço: <h11>*</h11></label>
+                                <input type="text" class="form-control" id="preco" name="preco">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Descrição: <h11>*</h11></label>
+                                <textarea type="text" class="form-control" id="descricao" name="descricao"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Disponivel: <h11>*</h11></label>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="radio" name="disponivel" id="disponivel1"
+                                        value="1" checked>
+                                    <label class="form-check-label" for="disponivel1">
+                                        Sim
+                                    </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="radio" name="disponivel" id="disponivel2"
+                                        value="0">
+                                    <label class="form-check-label" for="disponivel2">
+                                        Não
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="imgProd">Escolha a Imagem do Produto <h11>*</h11></label>
+                                <input type="file" id="imgProd" name="imgProd" class="form-control-file">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Tamanho Imagem: <h11>*</h11></label>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="imgTamanho" value="70">
+                                    <label class="form-check-label">70x70</label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" name="imgTamanho"
+                                            value="180">180x180
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" name="imgTamanho" value="300"
+                                            >300x300
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success btn-block">Cadastrar</button>
+                            </div>
+                        </form>
+
+                    </div>
+                    <!-- começa div rodape -->
+                    <br>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- Fim Conatiner Geral-->
+
+    <br>
+    <div class="row" id="rodape">
+
+        <div class="container">
+            <h4>TITULO_SITE</h4>
+            <P>Todos os Direitos Reservados - Jorge Stief - Pirueba - Data Atual: 01/09/2019</P>
+        </div>
+
+
+    </div><!-- fim div rodape-->
+
+
+    <script src="assets/js/jquery-3.3.1.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/jquery.mask.min.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/cadastro/cadastro_produto.js"></script>
+</body>
+
+</html>
