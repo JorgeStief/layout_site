@@ -7,7 +7,6 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/all.css" rel="stylesheet">
     <link href="assets/cadastro/cadastro.css" rel="stylesheet">
-    <link href="assets/css/styles.css" rel="stylesheet">
     <link href="assets/css/tema.css" rel="stylesheet" type="text/css" />
     <title>Bootstrap</title>
 </head>
@@ -66,6 +65,9 @@
                                     <a class="nav-link " href="contato.html"><i
                                             class=" fas fas fas fas fa-file-contract"></i> Contato</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="cadastro_produto.html"><i class=" fas fas fas fas fa-file-contract"></i> Cadastro Produto</a>
+                                 </li>
                             </ul>
                             <form class="form-inline my-2 my-lg-0">
                                 <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar"
@@ -158,18 +160,18 @@
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Tamanho Imagem: <h11>*</h11></label>
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" name="imgTamanho" value="70">
+                                    <input type="checkbox" class="form-check-input require-one" name="imgTamanho70" id="tamanho" value="70">
                                     <label class="form-check-label">70x70</label>
                                 </div>
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" name="imgTamanho"
+                                        <input type="checkbox" class="form-check-input require-one"  name="imgTamanho180" id="tamanho"
                                             value="180">180x180
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" name="imgTamanho" value="300"
+                                        <input type="checkbox" class="form-check-input require-one" name="imgTamanho300" value="300" id="tamanho"
                                             >300x300
                                     </label>
                                 </div>
@@ -207,7 +209,6 @@
     <script src="assets/js/jquery.mask.min.js"></script>
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.js"></script>
-    <script src="assets/js/script.js"></script>
     <script src="assets/cadastro/cadastro_produto.js"></script>
 </body>
 

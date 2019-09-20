@@ -1,10 +1,30 @@
-﻿$(document).ready(function(){
+﻿$.validator.addMethod('require-one', function(value, element){
+	return $('input[id="tamanho"]:checked').length>0;
+}, "Escolha ao menos um tamanho!");
+
+$(document).ready(function(){
     
     $('#preco').mask('000.000.000.000.000,00', {reverse: true});
 
+    
+
+    var checkboxes = $('.require-one');
+    
+	var checkbox_names = $.map(checkboxes, function(e, i) {
+		return $(e).attr("name")
+    }).join(" ");
+   
+    
+
     $("#form").validate({
         debug: false,
+        groups: {
+			checks: checkbox_names
+		},
         rules: {
+            
+            
+
             cate:{
                 required: true,
                 
@@ -29,24 +49,13 @@
             imgProd: {
                 required: true,
             },
-            imgTamanho: {
-                required: true,
-            },
-            
-
+           
         },
         errorPlacement: function (error, element) {
-            alert(element);
-            var aux = $(element).parent();
-            
-                error.insertAfter(aux).addClass("invalid-feedback")
-            
-                //error.insertAfter(element).addClass("invalid-feedback")
-            
-            
-            
-
-            
+            //alert(element);
+            console.log(element);
+            error.insertAfter(element).addClass("invalid-feedback")
+                 
         },
         messages: {
             cate:{
@@ -67,10 +76,6 @@
             imgProd:{
                 required: "Campo Obrigatório"
             },
-            imgTamanho:{
-                required: "Campo Obrigatório"
-            },
-           
             
         }
     });
